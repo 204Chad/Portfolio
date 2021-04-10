@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alignment</title>
+    <style>
+        .box {
+            width: 400px;
+            height: 200px;
+            margin-bottom: 100px;
+            background-color: beige;
+        }
+
+        .inner {
+            width: 50%;
+            height: 50%;
+            background-color: skyblue;
+        }
+
+        .inner1 {
+            margin: auto;
+        }
+
+        .box2 {
+            text-align: center;
+        }
+
+        .inner3 {
+            transform: translate(50%, 50%);
+        }
+
+        .box4 {
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>margin: auto</h3>
+    <!-- 한줄에 하나만 들어가기 위해서 들어가는 아이템이기 때문에 수평만 정렬 가능 -->
+    <div class="box box1">
+        <div class="inner inner1"></div>
+    </div>
+
+    <h3>text-align: center</h3>
+    <!-- 텍스트가 아닌 요소들도 중간정렬 할 수 있지만 display: block은 동작하지 않음(margin: auto 설정하면 가능) -->
+    <div class="box box2">
+        <button>Text</button>
+    </div>
+
+    <h3>translate(50%, 50%)</h3>
+    <!-- x, y축으로 위치 설정가능 -->
+    <div class="box box3">
+        <div class="inner inner3"></div>
+    </div>
+
+    <h3>Text centering</h3>
+    <!-- line-height은 텍스트 높이를 지정할 수 있음 -->
+    <div class="box box4">
+        <h1>Text</h1>
+    </div>
+
+
+
+</body>
+
+</html>
