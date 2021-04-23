@@ -57,7 +57,7 @@ a {
 
 ul {
     list-style: none;
-    padding-left: 0px;
+    margin: 0px;
 }
 
 button {
@@ -111,7 +111,7 @@ p {
     color: var(--color-white);
     padding: 8px;
     transition: all var(--animation-duration) ease-in-out;
-    z-index: 1;
+    z-index: 999;
 }
 
 #navbar.navbar--dark {
@@ -119,13 +119,14 @@ p {
 }
 
 .navbar__menu {
-    padding-top: 12px;
+    padding: 0;
     display: flex;
 }
 .navbar__logo {
     font-size: var(--font-medium);
     font-weight: var(--weight-semi-bold);
     white-space: nowrap;
+    padding-left: 10px;
 }
 
 .navbar__menu__item {
@@ -145,12 +146,15 @@ p {
 }
 .navbar__toggle__btn {
     position: absolute;
-    top: 16px;
-    right: 32px;
+    top: 12px;
+    padding: 2px 6px;
+    margin: 2px;
+    right: 16px;
     font-size: 24px;
     color: var(--color-white);
     display: none;
 }
+
 
 
 
@@ -262,11 +266,7 @@ p {
     height: 30px;
 }
 
-.logo {
-    width: 30px;
-    height: 35px;
-    transform: translate(15%, 20%);
-}
+
 
 /* Skill */
 
