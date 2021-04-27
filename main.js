@@ -68,7 +68,6 @@ workBtnContainer.addEventListener('click', (e) => {
         return;
     }
     projectContainer.classList.add('animation-out');
-
     setTimeout(() => {
         projects.forEach((project) => {
             if (filter === '*' || filter === project.dataset.type) {
@@ -76,9 +75,24 @@ workBtnContainer.addEventListener('click', (e) => {
             } else {
                 project.classList.add('invisible');
             }
-            console.log(project.dataset.type);
         });
         projectContainer.classList.remove('animation-out');
 
     }, 300);
+});
+
+
+// make hold work category button
+const categoryBtn = document.querySelectorAll('.category__btn');
+workBtnContainer.addEventListener('click', (e) => {
+    const btnFilter = e.target.dataset.filter;
+    categoryBtn.forEach((selected) => {
+        if (btnFilter == null) {
+            return;
+        } else if (btnFilter === selected.dataset.filter) {
+            selected.classList.add('active');
+        } else {
+            selected.classList.remove('active');
+        }
+    });
 });
