@@ -329,6 +329,10 @@ p {
     padding: 20px;
 }
 
+.tools__list,
+.etc__list {
+    padding: 0px;
+}
 
 .category__btn {
     border: 1px solid var(--color-dark-white);
@@ -373,6 +377,18 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    opacity: 1;
+    transition: all var(--animation-duration) ease-out;
+}
+
+.work__projects.animation-out {
+    opacity: 0;
+    transform: scale(0.95) translateY(5px);
+}
+
+
+.project.invisible {
+    display: none;
 }
 
 .project {
@@ -385,6 +401,7 @@ p {
     margin: 2px;
     background-color: var(--color-light-white);
 }
+
 
 
 .project__img {
