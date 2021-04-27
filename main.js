@@ -23,6 +23,7 @@ document.addEventListener('scroll', () => {
 
 // Handle scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector('.navbar__menu');
+const navbarItems = document.querySelectorAll('.navbar__menu__item');
 navbarMenu.addEventListener('click', (event) => {
     const target = event.target;
     const link = target.dataset.link;
@@ -31,6 +32,34 @@ navbarMenu.addEventListener('click', (event) => {
     }
     scrollIntoView(link);
 });
+
+
+// make hold navbar menu button
+navbarMenu.addEventListener('click', (e) => {
+    const targetItems = e.target.dataset.link;
+    navbarItems.forEach((selected) => {
+        if (targetItems == null) {
+            return;
+        } else if (targetItems === selected.dataset.link) {
+            selected.classList.add('active');
+        } else {
+            selected.classList.remove('active');
+        }
+    })
+});
+
+
+
+// add active class on home button
+const navbarLogo = document.querySelector('.navbar__logo');
+navbarLogo.addEventListener('click', () => {
+    scrollIntoView('#home');
+    for (let i = 1; i < navbarItems.length; i++) {
+        navbarItems[i].classList.remove('active');
+    }
+    navbarItems[0].classList.add('active');
+});
+
 
 // Move to Contact section when click Contact me button on the home
 const HomeContactBtn = document.querySelector('.home__contact');
@@ -49,6 +78,10 @@ document.addEventListener('scroll', () => {
 });
 arrowUp.addEventListener('click', () => {
     scrollIntoView('#home');
+    for (let i = 1; i < navbarItems.length; i++) {
+        navbarItems[i].classList.remove('active');
+    }
+    navbarItems[0].classList.add('active');
 });
 
 
@@ -96,3 +129,5 @@ workBtnContainer.addEventListener('click', (e) => {
         }
     });
 });
+
+

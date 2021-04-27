@@ -127,6 +127,8 @@ p {
     font-weight: var(--weight-semi-bold);
     white-space: nowrap;
     padding-left: 10px;
+    cursor: pointer;
+    
 }
 
 .navbar__menu__item {
