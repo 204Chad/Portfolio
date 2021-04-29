@@ -148,7 +148,7 @@ p {
 }
 .navbar__toggle__btn {
     position: absolute;
-    top: 12px;
+    top: 10px;
     padding: 2px 6px;
     margin: 2px;
     right: 16px;
@@ -340,7 +340,9 @@ p {
     border: 1px solid var(--color-dark-white);
     border-radius: var(--size-border-radius);
     font-size: var(--font-regular);
-    padding: 8px 48px;
+    padding: 8px 30px;
+    min-width: 200px;
+    margin: 5px;
 }
 
 .work__categories {
@@ -429,7 +431,7 @@ p {
     opacity: 0.8;
 }
 .project__description h3 {
-    color: var(--color-white);
+    color: var(--color-orange);
 }
 
 
@@ -438,7 +440,7 @@ p {
     display: block;
     position: relative;
     left: 50%;
-    width: 25px;
+    width: 50px;
     height: 2px;
     margin-left: -12px;
     margin-top: 8px;
