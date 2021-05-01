@@ -140,7 +140,7 @@ p {
 }
 
 .navbar__menu__item.active {
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 
 .navbar__menu__item:hover {
@@ -191,6 +191,10 @@ p {
     margin: 24px;
     padding: 8px 12px;
     border: 2px solid var(--color-white);
+}
+
+.home__contact:hover {
+    background-color: var(--color-orange);
 }
 
 /* Section common */
@@ -441,8 +445,8 @@ p {
     position: relative;
     left: 50%;
     width: 50px;
-    height: 2px;
-    margin-left: -12px;
+    height: 3px;
+    transform: translateX(-50%);
     margin-top: 8px;
     background-color: var(--color-dark-white);
 }
@@ -489,6 +493,27 @@ p {
     color: var(--color-pink);
 }
 
+.arrow-up {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    background-color: var(--color-pink);
+    color: var(--color-white);
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 300ms ease-in;
+    pointer-events: none;
+    z-index: 99999;
+}
+
+.arrow-up.visible {
+    opacity: 1;
+    display: block;
+    pointer-events: auto;
+}
 
 /* Contact */
 
@@ -532,14 +557,32 @@ p {
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
+    :root {
+    /* Font size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+    }
     .navbar__toggle__btn {
         display: block;
     }
     #navbar {
         flex-direction: column;
         align-items: flex-start;
+        background-color: var(--color-pink);
     }
 
+    .section {
+        padding: 16px;
+    }
+
+    .category__btn {
+        margin: 4px;
+        padding: 8px;
+    }
+    
     .navbar__menu {
         flex-direction: column;
         text-align: center;
@@ -547,12 +590,19 @@ p {
         display: none;
     }
 
+    .navbar__menu.open {
+        display: block;
+    }
+
     .about__majors {
         flex-direction: column;
+        margin-top: 30px;
+        margin-bottom: 0px;
     }
 
     .major {
         margin-bottom: 38px;
+        margin: 30px;
     }
 
     .skillset {
@@ -569,26 +619,4 @@ p {
     }
 
 
-}
-
-.arrow-up {
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    width: 50px;
-    height: 50px;
-    font-size: 30px;
-    background-color: var(--color-pink);
-    color: var(--color-white);
-    border-radius: 50%;
-    opacity: 0;
-    transition: all 300ms ease-in;
-    pointer-events: none;
-    z-index: 99999;
-}
-
-.arrow-up.visible {
-    opacity: 1;
-    display: block;
-    pointer-events: auto;
 }
