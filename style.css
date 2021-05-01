@@ -594,6 +594,10 @@ p {
         display: block;
     }
 
+    .navbar__toggle__btn {
+        font-size: var(--font-medium);
+    }
+
     .about__majors {
         flex-direction: column;
         margin-top: 30px;
